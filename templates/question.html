@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST">
+    <label> {{ index }}. {{ Question }} </label><br>
+    <br>
+    {% for i, answer in enumarate(Answers) %}
+        <input type="radio" name="answer" value="{{i}}" /> {{ answer }} <br>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Dalej" />
+</form>
+{% endblock content %}
